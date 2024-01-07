@@ -2,3 +2,7 @@
 console.log("hello!");
 var name1 = prompt("What is your name?");
 alert(name1);
+alert( `Hello, ${name1}!` );
+alert(1/0);//infinity
+alert( "not a number" / 2 ); // NaN, such division is erroneous
+
