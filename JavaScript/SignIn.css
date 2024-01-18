@@ -1,18 +1,25 @@
 .resizable-box {
-  width: 50%; /* Initial width as a percentage of the viewport width */
-  height: 50%; /* Initial height as a percentage of the viewport height */
-  background-color: #f597e0;
-  border: 3px solid #f106be;
-  border-radius: 8px;
-  padding: 20px;
-  color: #ffffff;
-  text-align: center;
-  /* box-shadow: 0 2px 6px rgba(221, 25, 165, 0.1); */
-}
-.resizable-box:hover{
-    background-color:rgb(29, 6, 79);
-    color:white;
-}
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Initial width as a percentage of the viewport width */
+    height: 50%; /* Initial height as a percentage of the viewport height */
+    background-color: #f597e0;
+    border: 3px solid #f106be;
+    border-radius: 8px;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    /* box-shadow: 0 2px 6px rgba(221, 25, 165, 0.1); */
+  }
+  
+  .resizable-box:hover {
+    background-color: rgb(29, 6, 79);
+    color: white;
+  }
+  
+
 @media (max-width: 600px) {
   /* Adjust styles for screens with a maximum width of 600px */
   .resizable-box {
@@ -24,6 +31,7 @@
 #i1{
     border-radius: 20px;
 }
+
 #h3:hover{
   transform: skewX(20deg);
 }
@@ -36,17 +44,20 @@
 }
 
 #submit::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
+    content: ""; /* It generates an empty box for overlay effect */
+    position: absolute;/* This positions the pseudo-element absolutely within the positioned ancestor (#submit in this case).*/
+    top: 0;/* This sets the top position of the pseudo-element to the top of its containing element (#submit). */
+    left: -100%;/* left: -100%;: This initially positions the pseudo-element outside the left boundary of its containing element, making it not visible. */
+    width: 100%;/* width: 100%; and height: 100%;: These properties ensure that the pseudo-element covers the entire area of its containing element. */
     height: 100%;
     background-color: rgb(12, 245, 12);
-    transition: left 0.5s ease;
+    transition: left 0.5s ease;/* transition: left 0.5s ease;: This adds a transition effect to the left property, making the left movement smooth over 0.5 seconds with an ease timing function.*/
     z-index: -1; /* Place the pseudo-element below the text */
 }
 
 #submit:hover::before {
     left: 0;
+}
+#hide{
+    display:none;
 }
