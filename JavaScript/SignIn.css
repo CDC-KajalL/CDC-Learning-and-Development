@@ -1,0 +1,52 @@
+.resizable-box {
+  width: 50%; /* Initial width as a percentage of the viewport width */
+  height: 50%; /* Initial height as a percentage of the viewport height */
+  background-color: #f597e0;
+  border: 3px solid #f106be;
+  border-radius: 8px;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+  /* box-shadow: 0 2px 6px rgba(221, 25, 165, 0.1); */
+}
+.resizable-box:hover{
+    background-color:rgb(29, 6, 79);
+    color:white;
+}
+@media (max-width: 600px) {
+  /* Adjust styles for screens with a maximum width of 600px */
+  .resizable-box {
+    width: 80%;
+    height: 40%;
+  }
+}
+
+#i1{
+    border-radius: 20px;
+}
+#h3:hover{
+  transform: skewX(20deg);
+}
+#submit {
+    position: relative;
+    overflow: hidden;
+    background-color: aquamarine;
+    transition: background-position 0.5s ease;
+    z-index: 1; /* Ensure the text is above the pseudo-element */
+}
+
+#submit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(12, 245, 12);
+    transition: left 0.5s ease;
+    z-index: -1; /* Place the pseudo-element below the text */
+}
+
+#submit:hover::before {
+    left: 0;
+}
