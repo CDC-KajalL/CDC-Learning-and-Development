@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CDC</title>
+    <link rel="stylesheet" href="./test.css">
+</head>
+
+<body>
+    <h1>Hello, world!</h1>
+    <div class="box1">
+        <p id="text1">hello</p>
+        <p id = "d"></p>
+    </div><br />
+    <button type = "button" onclick = "document.getElementById('d').innerHTML = Date()">What's date today?</button>
+    
+    <div id="box2">
+        <div class="c">
+            <p class="text2">Click start to play</p>&nbsp;&nbsp;
+            <button class="btn">Start</button>
+        </div>
+        <button class="btn1 hide">Stop!</button>
+        <button class = "btn2 hide">Resest</button>
+    </div>
+    <p id = "score"></p>
+    
+    <script src="./test.js"></script>
+</body>
+
+</html>

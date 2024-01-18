@@ -1,0 +1,60 @@
+.profile-pic {
+    color: transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* This sets the position property to relative, establishing a positioning context for child elements with absolute positioning. */
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .profile-pic input {
+     display: none;/* This hides the input element. The input is used for file selection but is visually hidden. */
+  }
+  .profile-pic img {
+    /* position: absolute;: This positions the image absolutely within its containing element, allowing it to be placed relative to the .profile-pic container. */
+    position: absolute;
+    /* This property ensures that the image covers the entire container while maintaining its aspect ratio. */
+    object-fit: cover;
+    width: 165px;
+    height: 165px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+    border-radius: 100px;
+    /* This sets the stacking order of the image. The z-index property is used to control the vertical stacking of elements. */
+    z-index: 0;
+  }
+  .profile-pic .-label {
+    cursor: pointer;
+    height: 165px;
+    width: 165px;
+  }
+  .profile-pic:hover .-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* This sets the background color of the label to a semi-transparent black when the .profile-pic container is hovered. */
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    color: #fafafa;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 100px;
+    /* This removes any bottom margin to ensure the label aligns seamlessly with the image. */
+    margin-bottom: 0;
+  }
+  .profile-pic span {
+    display: inline-flex;
+    padding: 0.2em;
+    height: 2em;
+  }
+  
+  body {
+    height: 100vh;
+    background-color: #191815;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body a:hover {
+    /* This removes the underline from anchor links when hovered over. */
+    text-decoration: none;
+  }
