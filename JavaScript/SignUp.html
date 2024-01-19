@@ -14,20 +14,24 @@
 
 <body>
     <!-- Signup Box -->
-    <div class = "resizable-box">
-        <h3 id = "h3">Sign Up</h3><br/>
+    <div class="resizable-box">
+        <h3 id="h3">Sign Up</h3><br />
         <form>
-            <label id="l1">Username:</label>&nbsp
-            <input id="i1" type="text" name="username" placeholder="Name"><br />
-            <label></label>
-            <label id="l1">Password:</label>&nbsp
-            <input id="i1" type="password" name="password" placeholder="Password">
-            <br /><br/>
-            <button id="submit">SignUp</button><br/><br/><br/>
-            <p>Done SignUp? go <u><a href = "SignIn.html">back</a></u></p>
+            <label for = "username">Username:</label>&nbsp
+            <input class="username" id="username" type="text" name="username" placeholder="Name"><br />
+            <label for = "password">Password:</label>&nbsp
+            <input class="password" id="password" type="password" name="password" placeholder="Password">
+            <br /><br />
+            <button id="submit">SignUp</button><br /><br /><br />
+            <p>Done SignUp? go <u><a href="SignIn.html">back</a></u></p>
         </form>
     </div>
-    <script src="SignIn.js"></script>
+    <font color="black">
+        <div id="displayData">
+            
+        </div>
+    </font>
+    <script src="SignUp.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
