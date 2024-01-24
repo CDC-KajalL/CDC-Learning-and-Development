@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Your styles go here */
+  </style>
+</head>
+<body>
+
+<div class="dropdown">
+  <select id="myDropdown">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+  <button onclick="getSelectedOption()">Get Selected Option</button>
+</div>
+
+<script>
+  function getSelectedOption() {
+    // Get the dropdown element
+    var dropdown = document.getElementById("myDropdown");
+
+    // Get the selected index
+    var selectedIndex = dropdown.selectedIndex;
+
+    // Get the selected option
+    var selectedOption = dropdown.options[selectedIndex];
+
+    // Get the value and text of the selected option
+    var selectedValue = selectedOption.value;
+    var selectedText = selectedOption.text;
+
+    // Display the results (you can customize this part based on your needs)
+    alert("Selected Value: " + selectedValue + "\nSelected Text: " + selectedText);
+  }
+</script>
+
+</body>
+</html>
+

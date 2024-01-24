@@ -21,6 +21,7 @@ if (day == "1") {
 }
 document.getElementById("p1").innerHTML = txt;
 document.getElementById("h1").innerHTML = "Welcome to Data Structures program!";
+//substring
 document.getElementById("id1").addEventListener("click", () => {
     let str = prompt("Enter a string:");
     let sub_str = prompt("Enter a substring:");
@@ -60,6 +61,7 @@ document.getElementById("id1").addEventListener("click", () => {
     //     console.log(`${subString} is not a substring of ${mainString}`);
     // }
 });
+//find element in an array
 document.getElementById("id2").addEventListener("click", () => {
     let arr = prompt("Enter an array: i.e [1,\"hi\",3]")
     let e = prompt("Enter element you want to find out: i.e. 3")
@@ -83,6 +85,7 @@ document.getElementById("id2").addEventListener("click", () => {
     }
 
 })
+//perform arithmetic opertions
 document.getElementById("id3").addEventListener("click", ()=>{
     let num1 = prompt("Enter first number:")
     let num2 = prompt("Enter second number:")
@@ -108,6 +111,7 @@ document.getElementById("id3").addEventListener("click", ()=>{
     document.getElementById("results").innerHTML = r;
     alert(r);
 });
+//string concatenation
 document.getElementById("id4").addEventListener("click", ()=>{
     let str = prompt("Enter First String:")
     let str2 = prompt("Enter Second String:")
@@ -145,6 +149,7 @@ document.getElementById("id6").addEventListener("click", ()=>{
     document.getElementById("results").innerHTML = r;
     alert(r);
 })
+//odd numbers
 document.getElementById("id7").addEventListener("click", ()=>{
     let num = prompt("Enter range of odd numbers till you want:")
     let arr = []
@@ -158,7 +163,8 @@ document.getElementById("id7").addEventListener("click", ()=>{
     alert(r);
 })
 
-// It takes four parameters:
+//Sum of all Numbers
+//  It takes four parameters:
 // accumulator: The accumulated result.
 // currentValue: The current element being processed in the array.
 // currentIndex: The index of the current element being processed.
@@ -190,3 +196,18 @@ document.getElementById("id9").addEventListener("click", ()=>{
 
 // // Schedule the execution of greet with the argument 'John' after 1500 milliseconds
 // setTimeout(greet, 1500, 'John');
+
+// When the sort() function compares two values, it sends the values to the compare function, and sorts the values according to the returned (negative, zero, positive) value.
+// If the result is negative, a is sorted before b.
+// If the result is positive, b is sorted before a.
+// If the result is 0, no changes are done with the sort order of the two values.
+document.getElementById("id10").addEventListener("click", ()=>{
+    let str = prompt("Enter values separated by commas")
+    let arr = str.split(',').map(Number);
+    let r = arr.sort(function(a,b){
+        return a - b//b-a in decreasing order
+    })
+    document.getElementById("results").innerHTML = r;
+    alert(r);
+})
+//
