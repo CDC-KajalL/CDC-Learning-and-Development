@@ -145,4 +145,48 @@ document.getElementById("id6").addEventListener("click", ()=>{
     document.getElementById("results").innerHTML = r;
     alert(r);
 })
+document.getElementById("id7").addEventListener("click", ()=>{
+    let num = prompt("Enter range of odd numbers till you want:")
+    let arr = []
+    for(let i =1; i<=num; i++){
+        arr.push(i)
+    }
+    const r = arr.filter(function(n){
+        return n%2 != 0;
+    })
+    document.getElementById("results").innerHTML = r;
+    alert(r);
+})
 
+// It takes four parameters:
+// accumulator: The accumulated result.
+// currentValue: The current element being processed in the array.
+// currentIndex: The index of the current element being processed.
+// array: The array that reduce is being applied to.
+document.getElementById("id8").addEventListener("click", ()=>{
+    let n = prompt("Enter range:")
+    let arr = []
+    for(let i = 0; i<=n; i++){
+        arr.push(i)
+    }
+    const r = arr.reduce(function(accumulator, currentValue){
+        return accumulator + currentValue;
+    })
+    alert(r);
+    document.getElementById("results").innerHTML = r;
+})
+//setTimeOut
+document.getElementById("id9").addEventListener("click", ()=>{
+    setTimeout(() => {
+        document.getElementById("p1").innerHTML = "Hare Krishna!"
+    }, 5000);
+    setTimeout(() => {
+        document.getElementById("p1").innerHTML = txt;
+    }, 10000);
+})
+// function greet(name) {
+//     console.log('Hello, ' + name + '!');
+// }
+
+// // Schedule the execution of greet with the argument 'John' after 1500 milliseconds
+// setTimeout(greet, 1500, 'John');
