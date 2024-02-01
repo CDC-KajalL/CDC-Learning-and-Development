@@ -152,6 +152,8 @@ while (n != 2) {
         let t = prompt("Enter any no from the menu:")
         if(t == 1){
             outsider.menu();
+        }else if(t==2){
+            break;
         }
     }
 }
