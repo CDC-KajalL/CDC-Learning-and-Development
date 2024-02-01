@@ -31,3 +31,7 @@ alert( 2 ** 4 ); // 16 (2 * 2 * 2 * 2)
 let isBoss = confirm("Are you the boss?");
 alert( isBoss ); // true if OK is pressed
 
+// Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
+function myFunction() {
+    a = 4;
+}
