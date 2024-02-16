@@ -1,6 +1,7 @@
 import React from 'react'
-// 
+
 function Button1({a, b}) {
+  
   return (
     <div>
       <h1>{a}</h1>
