@@ -1,7 +1,9 @@
-import {useState} from 'react'
+import React, {useState} from 'react'
 import Box from './_1_Box';
 import Btn from './_1_Button';
+import Form1 from './_3_Form';
 
+//Wishes according to the time
 const Wish = () => {
     const today = new Date();
     if (today.getHours() < 12) {
@@ -20,45 +22,54 @@ const Wish = () => {
         return "Have a great day ahead🌼!"
     }
 }
-//Iterating through array
-const even = (arr) => {
-    const r = arr.filter(num => num % 2 === 0);
-    console.log(r)
-    return r;
-}
 
 function Introduction() {
-    const [name, setName] = useState('Nini');
+    const [name, setName] = useState('Kajal');
     const nums = [7, 3, 1, 2, 4, 6, 11, 22]
-    //passing as a parameter in random function
+    const [displayText, setDisplayText] = useState('');
+
+    //Even number from the list
+    const even = (arr) => {
+        const r = arr.filter(num => num % 2 === 0);
+        console.log(r)
+        setDisplayText(r.join(','));
+        return r;
+    }
+    //random item selector from an array passed as a parameter
     const Randomise = (arr) => {
         const r = Math.floor(Math.random() * arr.length)
         return arr[r];
     }
+    //Changes the name on double click through a random function
     const handleNameChange =()=>{
         const names = ["Kate", "Einstenina", "Nini", "Kajal", "Einsta"]
         const r = Math.floor(Math.random() * names.length)
         setName(names[r]);
         console.log("double clicked!")
     }
+
     return (
         <div>
             <div className="flex justify-center flex-col text-center ">
-                <p onDoubleClick={handleNameChange}>Hey {name}</p>
+                <h1 onDoubleClick={handleNameChange}>Hey {name}</h1>
                 <p>{Wish()}</p>
                 <br />
                 <div className="flex flex-wrap space-x-1 space-y-1">
-                    <Box className="">
+                    {/* Box 1 */}
+                    <Box width="52" height="52" color = "red-300">
                         <p>Finding even numbers from the below list</p><br />
                         <div className="text-xs">
                             <p >List = [{nums.join(',')}]</p>
-                            <p></p>
+                            <p>Even Numbers = [{displayText}]</p>
                         </div>
                         <br />
-                        <Btn size="sm" type="primary" onClick={even(nums)}>Generate</Btn>
+                        <Btn size="sm" type="primary" onClick={() => even(nums)}>Generate</Btn>
                     </Box>
-                    <Box className="">
-                        <Btn size="sm" type="secondary">Generate</Btn>
+                    {/* Box 2 */}
+                    <Box width = "52" height = "56" color = "orange-300">
+                        <p>Number Game</p><br/>
+                        <Form1></Form1>
+                        
                     </Box>
                 </div>
             </div>
