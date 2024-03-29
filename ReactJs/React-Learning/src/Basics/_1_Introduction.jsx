@@ -42,7 +42,8 @@ function Introduction() {
     }
     //Changes the name on double click through a random function
     const handleNameChange =()=>{
-        const names = ["Kate", "Einstenina", "Nini", "Kajal", "Einsta"]
+        // const names = ["Kate", "Einstenina", "Nini", "Kajal", "Einsta"]
+        const names = ["Aakash", "Aditi", "Aditya", "Ankit", "Ansh", "Chetan", "Dattatraya", "Naman", "Keshav", "Nischal", "Rohit", "Siddhesh", "Sonu", "Sriram", "Usha", "Sravani", "Sumantraj Paul", "Sonu", "Saksham"]
         const r = Math.floor(Math.random() * names.length)
         setName(names[r]);
         console.log("double clicked!")
@@ -56,20 +57,23 @@ function Introduction() {
                 <br />
                 <div className="flex flex-wrap space-x-1 space-y-1">
                     {/* Box 1 */}
-                    <Box width="52" height="52" color = "red-300">
+                    <Box width="45" height="52" color = "[#8800ff]">
                         <p>Finding even numbers from the below list</p><br />
+                        
                         <div className="text-xs">
                             <p >List = [{nums.join(',')}]</p>
                             <p>Even Numbers = [{displayText}]</p>
                         </div>
                         <br />
-                        <Btn size="sm" type="primary" onClick={() => even(nums)}>Generate</Btn>
+                        <Btn size="sm" type="primary" onClick={() => even(nums)}>Generate</Btn><br/>
                     </Box>
                     {/* Box 2 */}
                     <Box width = "52" height = "56" color = "orange-300">
                         <p>Number Game</p><br/>
                         <Form1></Form1>
-                        
+                    </Box>
+                    <Box width = "52" height = "56" color = "orange-300">
+                        <p>Number Game</p><br/>
                     </Box>
                 </div>
             </div>
