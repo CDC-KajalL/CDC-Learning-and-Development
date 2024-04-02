@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import Box from './_1_Box';
 import Btn from './_1_Button';
 import Form1 from './_3_Form';
+import Rating from './_5_Props';
+import Universal from './_6_Class_concept';
 
 //Wishes according to the time
 const Wish = () => {
@@ -58,7 +60,7 @@ function Introduction() {
                 <div className="flex flex-wrap space-x-1 space-y-1">
                     {/* Box 1 */}
                     <Box width="45" height="52" color = "[#8800ff]">
-                        <p>Finding even numbers from the below list</p><br />
+                        <p><b>Finding even numbers from the below list</b></p><br />
                         
                         <div className="text-xs">
                             <p >List = [{nums.join(',')}]</p>
@@ -69,11 +71,35 @@ function Introduction() {
                     </Box>
                     {/* Box 2 */}
                     <Box width = "52" height = "56" color = "orange-300">
-                        <p>Number Game</p><br/>
+                        <p><b>Number Game</b></p><br/>
                         <Form1></Form1>
                     </Box>
+                    {/* Box 3 */}
                     <Box width = "52" height = "56" color = "orange-300">
-                        <p>Number Game</p><br/>
+                    <p><b>Rating</b></p><br/>
+                        <div >  
+                            <Rating rating = "1"/>
+                            <Rating rating = "2"/>
+                            <Rating rating = "3"/>
+                            <Rating rating = "4"/>
+                            <Rating rating = "5"/>
+                        </div>
+                    </Box>
+                    {/* Box 4 */}
+                    <Box width = "52" height = "56" color = "orange-300">
+                        <div className="flex flex-row">
+                            Python:&nbsp;&nbsp;&nbsp;<Universal/>
+                        </div>
+                        <div className="flex flex-row">
+                            C++: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Universal/><br/>
+                        </div>
+                        <div className="flex flex-row">
+                            Java: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Universal/><br/>
+                        </div>
+                        <Btn size="sm" type="primary" onClick={() => this.handleSubmit()}>
+                        Submit
+                    </Btn>
+                        
                     </Box>
                 </div>
             </div>

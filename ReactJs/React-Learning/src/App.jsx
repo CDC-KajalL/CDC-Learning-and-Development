@@ -7,9 +7,9 @@ import Second from './Basics/_2_Arrays'
 function App() {
   return (
     <div>
-    {/* <Introduction/> */}
+    <Introduction/>
     {/* <UseEffect/> */}
-    <Second/>
+    {/* <Second/> */}
     </div>
   )
 }
