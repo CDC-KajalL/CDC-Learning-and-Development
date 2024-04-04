@@ -4,7 +4,7 @@ import { IoIosStar, IoIosStarOutline } from 'react-icons/io';
 
 class Universal extends React.Component {
     constructor(props) {
-        super(props);
+        super(props); //Calls the constructor of the parent class (i.e., React.Component).
         this.state = { rating: 0 };
     }
 
@@ -13,7 +13,7 @@ class Universal extends React.Component {
     };
 
     render() {
-        const { rating } = this.state;
+        const { rating } = this.state; 
 
         return (
             <div>
