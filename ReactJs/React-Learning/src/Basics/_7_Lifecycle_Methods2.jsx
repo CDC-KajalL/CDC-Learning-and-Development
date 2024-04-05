@@ -7,7 +7,6 @@ class LifeCycleB extends Component {
         this.state = {
             name: "Kajal"
         }
-        constructor("Done Console.log to show the order of execution during mounting phase")
         console.log('LifeCycleB constructor')
     }
     static getDerivedFromProps(props, state){
@@ -16,6 +15,17 @@ class LifeCycleB extends Component {
     }
     componentDidMount(){
         console.log('LifeCycleB componentDidMount')
+    }
+    shouldComponentUpdate(){
+        console.log('LifeCycleB shouldComponentUpdate')
+        return true
+    }
+    getSnapshotBeforeUpdate(prevProps, nextProps){
+        console.log("LifeCycleB getSnapshotBeforeUpdate")
+        return null;
+    }
+    componentDidUpdate(){
+        console.log("LifeCycleB componentDidUpdate")
     }
     render() {
         console.log('LifeCycleB render')
