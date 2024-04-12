@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('/assets/bg2.jpeg')",
-        'footer-texture': "url('/img/footer-texture.png')",
+        'bg1': "url('/assets/bg1.svg')",
+        'bg2': "url('/assets/bg2.svg')",
       }
     },
   },

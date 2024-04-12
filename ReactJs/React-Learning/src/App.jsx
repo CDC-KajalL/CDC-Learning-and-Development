@@ -4,6 +4,7 @@ import Introduction from './Basics/_1_Introduction'
 import UseEffect from './Basics/_4_UseEffect_concept'
 import Second from './Basics/_2_Arrays'
 import LifeCycleA from './Basics/_7_Lifecycle_Methods'
+import Assignment1 from './Basics/_8_Assignment1'
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
     {/* <Introduction/> */}
     {/* <UseEffect/> */}
     {/* <Second/> */}
-    <LifeCycleA/>
+    {/* <LifeCycleA/> */}
+    <Assignment1/>
     </div>
   )
 }
