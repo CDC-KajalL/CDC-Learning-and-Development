@@ -10,6 +10,7 @@ import img8 from "../assets/p4.svg";
 import img9 from "../assets/krishna.jpg";
 import img10 from "../assets/RADHAKRISHNA.jpg";
 import img11 from "../assets/design.svg";
+import img12 from "../assets/welcome.jpg";
 
 const Card = () => {
 	const cardData = [
@@ -70,16 +71,15 @@ const Card = () => {
 	];
 
 	return (
-		<div className=" w-full h-full">
+		<div className=" w-full justify-center items-center">
 			{/* navbar */}
-			<div className="relative  mb-[20px]">
+			<div className="relative mb-[20px]">
 				<Navbar />
 			</div>
 
-			<div className="w-full bg-white"></div>
-			<div className="flex justify-center flex-row bg-gradient-to-r from-orange-300 via-orange-400 to-pink-500 py-16 text-orange-100">
+			<div className="flex flex-row bg-gradient-to-r from-orange-300 via-orange-400 to-pink-500 py-16 text-white">
 				{/* left box */}
-				<div className="w-[50%] p-3">
+				<div className="w-[50%] p-10 flex flex-col justify-center items-center">
 					<div className="p-6 text-white font-poppins">
 						<h1 className="text-4xl font-bold mb-2">
 							The Topmost Source Of Spiritual Knowledge
@@ -132,10 +132,36 @@ const Card = () => {
 				</div>
 			</div>
 
+			{/* About Author */}
+			<div className="bg-gradient-to-l from-orange-300 via-orange-400 to-pink-500 text-white font-semibold">
+				<div className="flex flex-row p-5">
+					<div className="w-[50%] text-center flex flex-col justify-center items-center">
+						<img src={img12} className="w-[500px] rounded-xl shadow-2xl" />
+						<p className="text-xl">A. C. Bhaktivedanta Swami Prabhupada</p>
+					</div>
+					<div className="w-[50%] flex flex-col justify-center items-start">
+						<p className="w-[600px] text-xl text-left">
+							Srila Prabhupada, born Abhay Charan De, was a renowned spiritual
+							teacher and the founder-acharya of the International Society for
+							Krishna Consciousness (ISKCON), also known as the Hare Krishna
+							movement. He dedicated his life to spreading the teachings of
+							Bhagavad Gita and the practice of bhakti yoga worldwide.
+							Prabhupada traveled extensively, delivering lectures, writing
+							books, and establishing temples and ashrams around the globe. His
+							profound wisdom, compassion, and devotion continue to inspire
+							millions of people to lead a life of spiritual growth and service.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div className="flex flex-col justify-center items-center">
+				<img src={img11} className="w-[300px] object-cover" />
+			</div>
+
 			{/* card logic  */}
 			<div className="mt-[20px] ">
 				<div>
-					<h1 className="font-bold text-center text-xl mb-5">
+					<h1 className="font-bold text-center text-4xl mb-5">
 						Available Books
 					</h1>
 				</div>
