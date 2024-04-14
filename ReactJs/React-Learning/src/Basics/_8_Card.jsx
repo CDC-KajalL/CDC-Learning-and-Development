@@ -1,5 +1,6 @@
 import React from "react";
 import { Shelf } from "./_8_Data";
+import Rating from "./_5_Props";
 
 const Card = () => {
 	return (
@@ -40,7 +41,7 @@ const Card = () => {
 						<div className=" mt-auto">
 							<p>
 								<span className="font-bold">Ratings: </span>
-								{book.rating}
+								<Rating rating = {book.rating}/>
 							</p>
 						</div>
 					</div>
