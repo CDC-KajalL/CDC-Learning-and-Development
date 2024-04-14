@@ -14,8 +14,8 @@ function App() {
 			{/* <UseEffect/> */}
 			{/* <Second/> */}
 			{/* <LifeCycleA/> */}
-			{/* <Assignment1/> */}
-			<Card />
+			<Assignment1/>
+			{/* <Card /> */}
 		</div>
 	);
 }

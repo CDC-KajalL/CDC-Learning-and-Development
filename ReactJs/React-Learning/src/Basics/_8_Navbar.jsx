@@ -9,16 +9,16 @@ function Navbar() {
 						Bhaktivedanta Library
 					</div>
 					<div className=" font-bold hidden md:flex space-x-4">
-						<a href="#" className="text-purple-700 hover:text-purple-600">
+						<a href="#" className="text-purple-700 hover:text-orange-500">
 							Home
 						</a>
-						<a href="#" className="text-purple-700 hover:text-purple-600">
+						<a href="#" className="text-purple-700 hover:text-orange-500">
 							About
 						</a>
-						<a href="#" className="text-purple-700 hover:text-purple-600">
+						<a href="#" className="text-purple-700 hover:text-orange-500">
 							Services
 						</a>
-						<a href="#" className="text-white hover:text-orange-200">
+						<a href="#" className="text-purple-700 hover:text-orange-500">
 							Contact
 						</a>
 					</div>
