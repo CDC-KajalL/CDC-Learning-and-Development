@@ -9,7 +9,7 @@ function Assignment1() {
 	return (
 		<div className=" w-full justify-center items-center">
 			<div className="relative mb-[20px]">
-				<Navbar/>
+				<Navbar />
 			</div>
 			<div className="flex flex-row bg-gradient-to-r from-orange-300 via-orange-400 to-pink-500 py-16 text-white">
 				{/* left box */}
@@ -89,7 +89,7 @@ function Assignment1() {
 				<img src={img11} className="w-[300px] object-cover" />
 			</div>
 			{/* Calling Card */}
-			<Card/>
+			<Card />
 		</div>
 	);
 }

@@ -39,7 +39,7 @@ const Card = () => {
 
 						{/* rating */}
 						<div className=" mt-auto">
-							<p>
+							<p>  
 								<span className="font-bold">Ratings: </span>
 								<Rating rating = {book.rating}/>
 							</p>
