@@ -24,7 +24,7 @@ function Second() {
     }
 
     function f3(arr){
-        const listItems = R1.map((obj, index) => (
+        const listItems = arr.map((obj, index) => (
             <ul key={index}>
                 {Object.values(obj).map((value, id) => (
                     <li key={id}>{value}</li>

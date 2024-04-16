@@ -12,10 +12,11 @@ function App() {
 		<div>
 			{/* <Introduction/> */}
 			{/* <UseEffect/> */}
-			{/* <Second/> */}
+			{/* <Second/>  */}
 			{/* <LifeCycleA/> */}
 			<Assignment1/>
 			{/* <Card /> */}
+
 		</div>
 	);
 }
