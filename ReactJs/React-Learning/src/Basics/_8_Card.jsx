@@ -1,6 +1,7 @@
 import React from "react";
 import { Shelf } from "./_8_Data";
 import Rating from "./_5_Props";
+import Btn from "./_1_Button";
 
 const Card = () => {
 	return (
@@ -43,6 +44,10 @@ const Card = () => {
 								<span className="font-bold">Ratings: </span>
 								<Rating rating = {book.rating}/>
 							</p>
+						</div>
+						{/* Readmore button */}
+						<div>
+							<Btn size="sm" type="primary" onClick = {()=>{alert(book.description)}}>Readmore</Btn>
 						</div>
 					</div>
 				))}
