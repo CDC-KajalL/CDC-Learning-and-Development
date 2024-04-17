@@ -2,8 +2,11 @@ import React from "react";
 import { Shelf } from "./_8_Data";
 import Rating from "./_5_Props";
 import Btn from "./_1_Button";
+import CardDetails from "./_8_Card_Details";
+import { useNavigate, Link } from 'react-router-dom';
 
 const Card = () => {
+	const navigate = useNavigate();
 	return (
 		<div className=" w-full justify-center items-center">
 			{/* map function */}
@@ -47,7 +50,7 @@ const Card = () => {
 						</div>
 						{/* Readmore button */}
 						<div>
-							<Btn size="sm" type="primary" onClick = {()=>{alert(book.description)}}>Readmore</Btn>
+							<Btn size="sm" type="primary" onClick = {()=>{navigate('view')}}>Readmore</Btn>
 						</div>
 					</div>
 				))}

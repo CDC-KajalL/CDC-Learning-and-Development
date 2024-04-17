@@ -7,6 +7,7 @@ import Second from "./Basics/_2_Arrays";
 import LifeCycleA from "./Basics/_7_Lifecycle_Methods";
 import Assignment1 from "./Basics/_8_Assignment1";
 import NoMatch from "./Basics/_8_NoMatch";
+import CardDetails from "./Basics/_8_Card_Details";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 			<Route path = '/LifeCycleA' element = {<LifeCycleA/>}></Route>
 			<Route path = '/' element = {<Assignment1/>}></Route>
 			<Route path="*" element={<NoMatch/>} />
+			<Route path="/view" element={<CardDetails/>} />
 			</Routes>
 		</div>
 	);
