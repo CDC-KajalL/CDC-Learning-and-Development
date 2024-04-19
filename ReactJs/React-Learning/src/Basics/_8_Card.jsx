@@ -5,8 +5,11 @@ import Btn from "./_1_Button";
 import CardDetails from "./_8_Card_Details";
 import { useNavigate, Link } from 'react-router-dom';
 
-const Card = () => {
+const Card = ({book}) => {
 	const navigate = useNavigate();
+	function handleClick(){
+		navigate('view')
+	}
 	return (
 		<div className=" w-full justify-center items-center">
 			{/* map function */}
@@ -50,7 +53,7 @@ const Card = () => {
 						</div>
 						{/* Readmore button */}
 						<div>
-							<Btn size="sm" type="primary" onClick = {()=>{navigate('view')}}>Readmore</Btn>
+						<Link to={`/view/${book.id}/`}><Btn size="sm" type="primary" onClick = {()=>{handleClick()}}>Readmore</Btn></Link>
 						</div>
 					</div>
 				))}

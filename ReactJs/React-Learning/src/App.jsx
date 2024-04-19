@@ -8,8 +8,11 @@ import LifeCycleA from "./Basics/_7_Lifecycle_Methods";
 import Assignment1 from "./Basics/_8_Assignment1";
 import NoMatch from "./Basics/_8_NoMatch";
 import CardDetails from "./Basics/_8_Card_Details";
-
-
+import CustomCard from "./Basics/_8_Custom_Card";
+import {cardData} from "./Basics/_9_Data"
+import CardComponent from "./Basics/_9_UseParams";
+import CardInfo from "./Basics/_9_CardInfo";
+import {Shelf} from "./Basics/_8_Data"
 function App() {
 	return (
 		<div>
@@ -20,7 +23,11 @@ function App() {
 			<Route path = '/LifeCycleA' element = {<LifeCycleA/>}></Route>
 			<Route path = '/' element = {<Assignment1/>}></Route>
 			<Route path="*" element={<NoMatch/>} />
-			<Route path="/view" element={<CardDetails/>} />
+			<Route path="/view" element=<CardDetails book = {Shelf}/> />
+			<Route path="/view/:id" element=<CardDetails book={Shelf} /> />
+			<Route path="/CustomCard" element={<CustomCard/>} />
+			<Route path="/test" element=<CardComponent data={cardData} /> />
+          <Route path="/info/:name" element=<CardInfo data={cardData} /> />
 			</Routes>
 		</div>
 	);
